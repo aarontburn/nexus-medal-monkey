@@ -2,8 +2,8 @@ module.exports = {
     excluded: ["electron.ts"],
     included: [],
     build: {
-        name: "Template Monkey",
-        id: "aarontburn.Template_Monkey",
+        name: "Medal Monkey",
+        id: "aarontburn.Medal_Monkey",
         process: "./process/main.js",
         replace: [
             {

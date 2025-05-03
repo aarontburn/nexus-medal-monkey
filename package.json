@@ -1,5 +1,5 @@
 {
-  "name": "nexus-template-monkey",
+  "name": "nexus-medal-monkey",
   "description": "'Embedding' external applications as a Nexus module. By monkeying it around.",
   "author": "aarontburn",
   "scripts": {

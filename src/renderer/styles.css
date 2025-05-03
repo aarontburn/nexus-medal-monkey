@@ -5,7 +5,7 @@
 
     color-scheme: light dark;
 
-    --color-1: #2c2d32;
+    --color-1: #161617;
     --color-2: #f5f5f5;
 
     color: var(--color-2);
@@ -103,7 +103,7 @@ button:hover {
 @media (prefers-color-scheme: light) {
     :root {
         --color-1: #f5f5f5;
-        --color-2: #2c2d32;
+        --color-2: #161617;
     }
 
     button {

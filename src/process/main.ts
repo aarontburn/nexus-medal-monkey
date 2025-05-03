@@ -2,7 +2,6 @@ import * as path from "path";
 import { DataResponse, HTTPStatusCodes, IPCSource, Process, Setting } from "@nexus-app/nexus-module-builder"
 import { BooleanSetting, StringSetting } from "@nexus-app/nexus-module-builder/settings/types";
 import { Window } from "node-window-manager";
-import * as fs from 'fs';
 import { Rectangle } from "electron";
 
 const MODULE_ID: string = "{EXPORTED_MODULE_ID}";
@@ -15,7 +14,7 @@ interface MonkeyParams {
     exePath: string;
     windowPath?: string;
     filter: Filter;
-    onEvent?: ((event: MonkeyEvents, data?: any) => void) | undefined,
+    onEvent?: ((event: MonkeyEvents, data?: any) => void) | undefined;
     options?: {
         closeOnExit?: boolean;
         isCurrentlyShown?: boolean;
@@ -36,7 +35,7 @@ type MonkeyEvents =
     "new-instance-failed"
 
 
-const APP_NAME: string = undefined;
+const APP_NAME: string = "Medal";
 
 
 
@@ -87,7 +86,7 @@ export default class ChildProcess extends Process {
             appName: APP_NAME,
             exePath: this.getSettings().findSetting("path").getValue() as string,
             windowPath: this.getSettings().findSetting("window_path").getValue() as string,
-            filter: (window: Window) => false, // change this to match your window criteria
+            filter: (window: Window) => window.getTitle().endsWith("Medal") && window.path.endsWith("Medal.exe") && window.isVisible(), // change this to match your window criteria
             onEvent: this.onMonkeyEvent.bind(this),
             options: {
                 closeOnExit: this.getSettings().findSetting("close_on_exit").getValue() as boolean,
