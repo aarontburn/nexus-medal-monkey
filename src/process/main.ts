@@ -139,7 +139,9 @@ export default class ChildProcess extends Process {
         }
     }
 
+    public async onSettingModified(modifiedSetting?: Setting<unknown>): Promise<void> {
 
+    }
 
     public async onGUIShown(): Promise<void> {
         this.isShown = true;
