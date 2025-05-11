@@ -6,6 +6,10 @@
     "description": "'Embedding' external applications as a Nexus module. By monkeying it around.",
     "platforms": [],
     "link": "https://github.com/aarontburn/nexus-medal-monkey",
+    "git-latest": {
+        "git-username": "aarontburn",
+        "git-repo-name": "nexus-medal-monkey"
+    },
     "build": {
         "excluded": [
             "electron.ts"
