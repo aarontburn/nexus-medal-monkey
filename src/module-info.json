@@ -1,8 +1,9 @@
 {
     "name": "Medal Monkey",
     "id": "aarontburn.Medal_Monkey",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "author": "aarontburn",
+    "author-id": "683193056e5989838dcf772c",
     "description": "'Embedding' external applications as a Nexus module. By monkeying it around.",
     "platforms": [],
     "link": "https://github.com/aarontburn/nexus-medal-monkey",
@@ -14,7 +15,7 @@
         "excluded": [
             "electron.ts"
         ],
-        "build-version": 5,
+        "build-version": 6,
         "included": [],
         "process": "./process/main.js",
         "replace": [
